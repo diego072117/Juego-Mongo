@@ -1,0 +1,46 @@
+
+consultas
+gt->mayor que.
+db.surAmericanos.find({ edad: { $gt:26 }})
+
+eq->igual que
+db.surAmericanos.find({ club: { $eq:"psg"}})
+
+ne->distinto de
+db.surAmericanos.find({ estatura: { $ne:183}})
+
+lt->menor que
+db.norteAmericanos.find({ edad: { $lt:25}})
+
+lte->menor o igual que
+db.norteAmericanos.find({ edad: { $lte:27}})
+
+nin->no dentro de 
+db.norteAmericanos.find({ edad: { $in:[27,37]}})
+
+in->dentro de
+db.Europeos.find({ estatura: { $nin:[170,180,187]}})
+
+or->un valor u otro
+db.Europeos.find({ $or: [{club:{$eq:"psg"}},{edad:{$gt:36} }]})
+
+actualizaciones
+
+actualizar varios documentos que conicidan con el fiel->
+db.surAmericanos.updateMany({club:{$eq:"psg"}},{$set:{club: "PSG"}})
+db.surAmericanos.updateMany({estatura:{$eq:180}},{$set:{estatura:1.80}})
+
+actualizar uno->
+db.surAmericanos.updateOne({nombre: "messi"},{$set:{estatura: 170}})
+db.surAmericanos.updateOne({_id:2},{$set:{seleccion:"BRASIL"}})
+
+upsert->inserta si no encuentra el documento a actualizar
+db.surAmericanos.updateOne({"_id":{$eq:11}},{$set:{"nombre":"david","edad":18,"seleccion":"Colombia","estatura":168}},{upsert:true})
+
+Eliminar
+
+db.norteAmericanos.findOneAndDelete({"nombre":"Kone"})
+db.norteAmericanos.findOneAndDelete({"nombre":"plisic"})
+db.norteAmericanos.deleteMany({"estatura":{$eq:190}})
+db.norteAmericanos.deleteOne({"_id":9})
+db.surAmericanos.deleteOne({"_id":11})

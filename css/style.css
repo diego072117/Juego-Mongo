@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+}
+
+hr{
+    border: 2px solid #240303;
+    margin-top: -25px;
+    margin-left: 50px;
+    width: 550px
+}
+.modal-fade{
+   width: 90%;
+   margin: auto
+}
+.btn btn-success btn-lg{
+    display: flex;
+}

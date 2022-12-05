@@ -1,0 +1,73 @@
+body{
+    font-family: 'Verdana';
+}
+
+h1{
+    text-align: center;
+}
+
+span{
+    display: inline-block;
+    background-color: #ccc;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.texto{
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: rgb(244,244,244);
+}
+
+.texto p{
+    line-height: 28px;
+}
+
+.opciones{
+    background-color: rgb(244,244,244);
+    max-width: 500px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    min-height: 40px;
+}
+
+.opciones .palabara{
+    display: inline-block;
+    background-color: aquamarine;
+    color: #fff;
+    margin: 5px;
+    padding: 2px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.opciones .palabara:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+#resultado{
+    text-align: center;
+}
+
+button{
+    display: block;
+    margin: auto;
+    padding: 5px 10px;
+    background-color: aqua;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+

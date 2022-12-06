@@ -17,8 +17,44 @@ span{
     line-height: 20px;
 }
 
+
+/*nivel 1*/
 .span1{
+    width: 2.5em;
+}
+
+.span2{
     width: 1.5em;
+}
+
+.span3{
+    width: 4em;
+}
+
+/*nivel 2*/
+
+.span4{
+    width: 1.5em;
+} 
+
+.span5{
+    width: 1.2em;
+}
+
+.span6{
+    width: 4em;
+}
+
+/*nivel 3*/
+
+/*nivel4*/
+
+.span7{
+    width: 6.5em;
+}
+
+.span8{
+    width: 11em;
 }
 
 .texto{
@@ -29,7 +65,19 @@ span{
     background-color: rgb(244,244,244);
 }
 
+.texto1{
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: rgb(244,244,244);
+}
+
 .texto p{
+    line-height: 28px;
+}
+
+.texto1 p{
     line-height: 28px;
 }
 

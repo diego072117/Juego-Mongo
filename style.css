@@ -37,7 +37,7 @@ span{
     min-height: 40px;
 }
 
-.opciones .palabara{
+.opciones .palabra{
     display: inline-block;
     background-color: aquamarine;
     color: #fff;
@@ -47,7 +47,7 @@ span{
     cursor: pointer;
 }
 
-.opciones .palabara:hover{
+.opciones .palabra:hover{
     background-color: #000;
     color: #fff;
 }

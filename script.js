@@ -105,7 +105,7 @@ comprobar.onclick = function () {
         }
 
     } else {
-        alert("completa las palabras")
+        Swal.fire("completa las palabras")
     }
 }
 

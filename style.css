@@ -17,6 +17,10 @@ span{
     line-height: 20px;
 }
 
+.span1{
+    width: 1.5em;
+}
+
 .texto{
     max-width: 500px;
     margin: auto;

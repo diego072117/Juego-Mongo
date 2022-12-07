@@ -1,0 +1,435 @@
+/*=============== Google Fonts ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+/*=============== Css Variables ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --title-color: #4a4a4a;
+  --text-color: #555;
+  --text-color-alt: #999;
+  --bg-color: #fff;
+  --bg-color-alt: #e9ecef;
+  --border-color: #f1f1f1;
+
+  /*========== Font and typography ==========*/
+  --roboto-font: 'Roboto', sans-serif;
+  --mono-font: 'Roboto Mono', monospace;
+
+  --fs-h1: 2.75rem;
+  --fs-h2: 2.25rem;
+  --fs-lg: 1.125rem;
+  --fs-base: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+
+  /*========== Font Weight ==========*/
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(fondoMongo.png);
+  background-size: cover;
+  /* background: linear-gradient(45deg, #fbda61, #ff5acd); */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/*=============== Reusable Css ===============*/
+
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
+
+/*=============== Header ===============*/
+
+.header{
+  /* display: flex; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: 0.3s;
+  box-shadow: 0 5px 8px 0 rgb(0 0 0 / 14%);
+}
+
+.nav{
+  height: calc(var( --header-height) + 0.875rem);
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav__list{
+  display: flex;
+  margin: 20px;
+  column-gap: 3.25rem;
+}
+
+.nav__link{
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: var(--bold);
+  font-family: var(--mono-font);
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav__link:hover{
+  opacity: 0.5;
+}
+
+.nav__link::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -0.5rem;
+  width: 7px;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.nav__link:hover::after{
+  opacity: 1;
+}
+
+.nav__close,
+.nav__toggle{
+  display: none;
+}
+
+/* Active Link */
+
+.active-link{
+  opacity: 0.5;
+}
+
+.active-link::after{
+  opacity: 1;
+}
+
+
+
+
+
+
+/*=============== Cards ===============*/
+
+
+
+.container-cards{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  margin: 1.25em;
+  width: 21.875em;
+  height: 400px;
+  background: rgba(205, 205, 205, 0.656);
+  border-radius: 1.25em;
+  box-shadow: 0 2.188em 5em rgba(0, 0, 0, 20);
+  transition: 0.5s;
+}
+
+/* .card:hover {
+  height: 450px;
+} */
+
+.imgBx {
+  position: absolute;
+  left: 50%;
+  top: -3.125em;
+  transform: translatex(-50%);
+  width: 15.625em;
+  height: 15.625em;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0.938em 3.125em rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* .card:hover .imgBx{
+  width: 250px;
+  height: 250px;
+} */
+
+.imgBx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.card .content .details{
+  padding: 2.5em;
+  text-align: center;
+  width: 100%;
+  transition: 0.5;
+  /* transform: translateY(150px); */
+}
+
+/* .card:hover .content .details{
+
+  transform: translateY(0px);
+
+} */
+
+.card .content .details h2{
+  font-size: 1.25em;
+  font-weight: 600;
+  color: rgb(61, 61, 61);
+  line-height: 1.2em;
+  margin: 0 0 2.5em
+}
+
+.card .content .details h2 span{
+  
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 1;
+}
+
+
+
+.card .content .details .actionBtn{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .content .details .actionBtn a{
+  display: flex;
+  padding: 0.625em 1.875em;
+  border-radius: 0.313em;
+  text-decoration: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 500;
+  background: #702b42;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 30%;
+}
+
+
+
+
+
+
+
+
+
+/*=============== BreakPoints ===============*/
+/* for large devices */
+@media screen and (max-width: 1200px) {
+
+  
+}
+
+@media screen and (max-width: 992px) {
+
+ 
+
+  .nav__menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: 0.3s;
+  }
+
+  .show-menu{
+    transform: translateX(0);
+  }
+
+  .nav__list{
+    flex-direction: column;
+    row-gap: 2.125rem;
+    text-align: center;
+  }
+
+  .nav__toggle,
+  .nav__close{
+    display: block;
+  }
+
+  .nav__close{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 2.7rem;
+    left: 8%;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .nav__toggle{
+    color: #fff;
+    margin: 20px;
+    font-size: 1.25rem;
+    opacity: 0.5;
+  }
+
+  .container-cards{
+    /* flex-wrap: wrap; */
+    margin-top: -5%;
+    
+  }
+
+  .card{
+    margin-bottom: 3em;
+    width: 15.625em;
+    height: 18.75em;
+   
+  }
+
+
+  .imgBx {
+    width: 9.375em;
+    height: 9.375em;
+  }
+
+
+  .card .content .details .actionBtn a{
+ 
+    margin: 0 22%;
+  }
+
+
+}
+
+/* for medium devices */
+@media screen and (max-width: 791px) {
+
+  .container-cards{
+    flex-wrap: wrap;
+    margin-top: 25%;
+    
+  }
+
+  .card{
+    margin-bottom: 3em;
+    width: 15.625em;
+    height: 18.75em;
+   
+  }
+
+
+  .imgBx {
+    width: 9.375em;
+    height: 9.375em;
+  }
+
+
+  .card .content .details .actionBtn a{
+ 
+    margin: 0 22%;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+
+  .container-cards{
+    flex-direction: column;
+    margin-top: 35%;
+  }
+
+  .card{
+    margin-bottom: 3em;
+    width: 18.75em;
+    height: 21.875em;
+  }
+
+
+  .imgBx {
+    width: 12.5em;
+    height: 12.5em;
+  }
+
+  .card .content .details .actionBtn a{
+ 
+    margin: 0 28%;
+  }
+
+
+
+}
+
+/* for small devices */
+@media screen and (max-width: 350px) {
+
+    .container-cards{
+      flex-direction: column;
+    }
+
+    .card{
+      margin-bottom: 3em;
+      width: 18.75em;
+      height: 21.875em;
+    }
+
+
+    .imgBx {
+      width: 12.5em;
+      height: 12.5em;
+    }
+
+    .card .content .details .actionBtn a{
+ 
+      margin: 0 28%;
+    }
+
+
+  }

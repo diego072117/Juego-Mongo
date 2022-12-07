@@ -1,82 +1,96 @@
-<section class="preguntas">
-    <h1>Preguntas</h1>
-
-    <form>
-        <div class="1p">
-            <label>Para crear una base de datos deberas utilizar el siguiete codigo</label><br>
-            <p>use Base de Datos</p>
-            <br>
-        </div>
-
-
-        <div class="2p">
-            <label>Si quieres crear una coleccion puedes utilizar el siguiente codigo</label><br>
-            <p>db.createCollection("coleccion")</p>
-        </div>
-
-        <div class="3p">
-            <label class="3p">Si deseas insertar un documento en una coleccion con este codigo lo podras
-                hacer:</label><br>
-            <p>db.coleccion.insert({file:"valor",file;"valor"})</p>
-        </div>
-
-        <div class="4p">
-            <label>Ahora si deseas insertar varios documentos puedes hacerslo asi:</label><br>
-            <p>db.coleccion.insert([{file:"valor",file;"valor"},{file:"valor",file:"valor"}])</p>
-            <br>
-        </div>
-
-        <div class="5p">
-            <label>Si necesitas consultar las colecciones creadas tienes que colcocar este codigo:</label><br>
-            <p>show collections</p>
-            <br>
-        </div>
-
-        <div class="6p">
-            <label>Si quieres ver los documentos que creaste en una coleccion podras usar este codigo</label><br>
-            <p>db.coleccion.find()</p>
-            <br>
-        </div>
-
-        <div class="7p">
-            <label>Ahora si quieres consultar el documento por un valor en especifico lo puedes hacer
-                asi:</label><br>
-            <p>db.coleccion.find({file:"valor"})</p>
-            <br>
-        </div>
-
-        <div class="8p">
-            <label>Y si quieres ver los documentos consultados de manera organizada debes poner este
-                codigo:</label><br>
-            <p>db.coleccion.find().pretty()</p>
-            <br>
-        </div>
-
-        <div class="9p">
-            <label>Si deseas actualizar un file de tu documento lo puedes hacer de esta manera:</label><br>
-            <p>db.coleccion.update({'file':'valor'},{$set:{'file':'valor'}})</p>
-            <br>
-        </div>
-
-        <div class="10p">
-            <label>Si quieres eliminar un documento lo puedes hacer asi:</label><br>
-            <p>db.coleccion.deleteOne({'file':'valor'})</p>
-            <br>
-        </div>
-
-        <div class="11p">
-            <label>Y por ultimo si deseas eliminar la base de datos puedes utilizar este codigo:</label><br>
-            <p>db.dropDatabase()</p>
-            <br>
-        </div>
-
-
-        <section>
-            <div className="menu outside">
-                <button><a href="C:\mongosh-1.6.0-win32-x64\bin\mongosh.exe">Práctica</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <section class="preguntas">
+        <h1>Preguntas</h1>
+    
+        <form>
+            <div class="1p">
+                <label>Para crear una base de datos deberas utilizar el siguiete codigo</label><br>
+                <p>use Base de Datos</p>
+                <br>
             </div>
-        </section>
+    
+    
+            <div class="2p">
+                <label>Si quieres crear una coleccion puedes utilizar el siguiente codigo</label><br>
+                <p>db.createCollection("coleccion")</p>
+            </div>
+    
+            <div class="3p">
+                <label class="3p">Si deseas insertar un documento en una coleccion con este codigo lo podras
+                    hacer:</label><br>
+                <p>db.coleccion.insert({file:"valor",file;"valor"})</p>
+            </div>
+    
+            <div class="4p">
+                <label>Ahora si deseas insertar varios documentos puedes hacerslo asi:</label><br>
+                <p>db.coleccion.insert([{file:"valor",file;"valor"},{file:"valor",file:"valor"}])</p>
+                <br>
+            </div>
+    
+            <div class="5p">
+                <label>Si necesitas consultar las colecciones creadas tienes que colcocar este codigo:</label><br>
+                <p>show collections</p>
+                <br>
+            </div>
+    
+            <div class="6p">
+                <label>Si quieres ver los documentos que creaste en una coleccion podras usar este codigo</label><br>
+                <p>db.coleccion.find()</p>
+                <br>
+            </div>
+    
+            <div class="7p">
+                <label>Ahora si quieres consultar el documento por un valor en especifico lo puedes hacer
+                    asi:</label><br>
+                <p>db.coleccion.find({file:"valor"})</p>
+                <br>
+            </div>
+    
+            <div class="8p">
+                <label>Y si quieres ver los documentos consultados de manera organizada debes poner este
+                    codigo:</label><br>
+                <p>db.coleccion.find().pretty()</p>
+                <br>
+            </div>
+    
+            <div class="9p">
+                <label>Si deseas actualizar un file de tu documento lo puedes hacer de esta manera:</label><br>
+                <p>db.coleccion.update({'file':'valor'},{$set:{'file':'valor'}})</p>
+                <br>
+            </div>
+    
+            <div class="10p">
+                <label>Si quieres eliminar un documento lo puedes hacer asi:</label><br>
+                <p>db.coleccion.deleteOne({'file':'valor'})</p>
+                <br>
+            </div>
+    
+            <div class="11p">
+                <label>Y por ultimo si deseas eliminar la base de datos puedes utilizar este codigo:</label><br>
+                <p>db.dropDatabase()</p>
+                <br>
+            </div>
+    
+    
+            <section>
+                <div className="menu outside">
+                    <button><a href="C:\mongosh-1.6.0-win32-x64\bin\mongosh.exe">Práctica</button>
+                </div>
+            </section>
+    
+        </form>
+        </div>
+    </section>
 
-    </form>
-    </div>
-</section>
+    <script src="/nav.js"></script>
+</body>
+</html>

@@ -1,101 +1,174 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Preguntas</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Preguntas frecuentes</title>
+    
+    <link rel="stylesheet" href="css/preguntas.css">
 </head>
-
 <body>
-    <section class="preguntas">
-        <h1>Preguntas</h1>
 
-        <form>
-            <div class="1p">
-                <label>Para crear una base de datos deberas utilizar el siguiete codigo</label><br>
-                <p>use Base de Datos</p>
-                <br>
-            </div>
-
-
-            <div class="2p">
-                <label>Si quieres crear una coleccion puedes utilizar el siguiente codigo</label><br>
-                <p>db.createCollection("coleccion")</p>
-            </div>
-
-            <div class="3p">
-                <label class="3p">Si deseas insertar un documento en una coleccion con este codigo lo podras
-                    hacer:</label><br>
-                <p>db.coleccion.insert({file:"valor",file;"valor"})</p>
-            </div>
-
-            <div class="4p">
-                <label>Ahora si deseas insertar varios documentos puedes hacerslo asi:</label><br>
-                <p>db.coleccion.insert([{file:"valor",file;"valor"},{file:"valor",file:"valor"}])</p>
-                <br>
-            </div>
-
-            <div class="5p">
-                <label>Si necesitas consultar las colecciones creadas tienes que colcocar este codigo:</label><br>
-                <p>show collections</p>
-                <br>
-            </div>
-
-            <div class="6p">
-                <label>Si quieres ver los documentos que creaste en una coleccion podras usar este codigo</label><br>
-                <p>db.coleccion.find()</p>
-                <br>
-            </div>
-
-            <div class="7p">
-                <label>Ahora si quieres consultar el documento por un valor en especifico lo puedes hacer
-                    asi:</label><br>
-                <p>db.coleccion.find({file:"valor"})</p>
-                <br>
-            </div>
-
-            <div class="8p">
-                <label>Y si quieres ver los documentos consultados de manera organizada debes poner este
-                    codigo:</label><br>
-                <p>db.coleccion.find().pretty()</p>
-                <br>
-            </div>
-
-            <div class="9p">
-                <label>Si deseas actualizar un file de tu documento lo puedes hacer de esta manera:</label><br>
-                <p>db.coleccion.update({'file':'valor'},{$set:{'file':'valor'}})</p>
-                <br>
-            </div>
-
-            <div class="10p">
-                <label>Si quieres eliminar un documento lo puedes hacer asi:</label><br>
-                <p>db.coleccion.deleteOne({'file':'valor'})</p>
-                <br>
-            </div>
-
-            <div class="11p">
-                <label>Y por ultimo si deseas eliminar la base de datos puedes utilizar este codigo:</label><br>
-                <p>db.dropDatabase()</p>
-                <br>
-            </div>
-
-
-            <section>
-                <div className="menu outside">
-                    <button><a href="C:\mongosh-1.6.0-win32-x64\bin\mongosh.exe">Práctica</button>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link active-link">Inicio</a>
+                    </li>
+    
+                    <li>
+                        <a href="" class="nav__link"></a>
+                    </li>
+    
+                    <li>
+                        <a href="" class="nav__link"></a>
+                    </li>
+    
+                    <li>
+                        <a href="" class="nav__link"></a>
+                    </li>
+    
+                </ul>
+    
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-fill"></i>
                 </div>
-            </section>
+            </div>
+    
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-fill"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container-pregu">
+        <div class="row">
+            <div class="container-faq">
+                <div class="title-faq">
+                    <h3>Aprende con nosotros y adquiere nuevos conocimientos</h3>
+                </div>
 
-        </form>
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Para crear una base de datos deberas utilizar el siguiete codigo <span>1</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>use nombre de Base de Datos.</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Si quieres crear una coleccion puedes utilizar el siguiente codigo <span>2</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.createCollection("Nombrecoleccion")</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Si deseas insertar un documento en una coleccion con este codigo lo podras
+                            hacer: <span>3</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.coleccion.insert({propiedad:"valor",propiedad;"valor"})</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Ahora si deseas insertar varios documentos puedes hacerslo asi: <span>4</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.coleccion.insert([{propiedad:"valor",propiedad;"valor"},{propiedad:"valor",propiedad:"valor"}])</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Si necesitas consultar las colecciones creadas tienes que colcocar este codigo: <span>5</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>show collections</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Si quieres ver los documentos que creaste en una coleccion podras usar este codigo: <span>6</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.coleccion.find()</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Ahora si quieres consultar el documento por un valor en especifico lo puedes hacer
+                            asi: <span>7</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.coleccion.find({file:"valor"})</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Y si quieres ver los documentos consultados de manera organizada debes poner este
+                            codigo: <span>8</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.coleccion.find().pretty()</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Si deseas actualizar un file de tu documento lo puedes hacer de esta manera: <span>9</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.coleccion.update({'file':'valor'},{$set:{'file':'valor'}})</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Si quieres eliminar un documento lo puedes hacer asi: <span>10</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.coleccion.deleteOne({'file':'valor'})</p>
+                    </div>
+                </div>
+
+                <div class="item-faq">
+                    <div class="question">
+                        <h3>Y por ultimo si deseas eliminar la base de datos puedes utilizar este codigo: <span>11</span></h3>
+                        <div class="more"><i>+</i></div>
+                    </div>
+                    <div class="answer">
+                        <p>db.dropDatabase()</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </section>
+    </div>
+
+    <script src="js/preguntas.js"></script>
+    <script src="js/nav.js"></script>
 </body>
-
-
-
-<script src="js/preguntas.js"></script>
-
 </html>

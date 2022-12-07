@@ -1,0 +1,9 @@
+.preguntas{
+    display: flex;
+    flex-direction: column;
+}
+
+div{
+    padding: 1.5em;
+}
+

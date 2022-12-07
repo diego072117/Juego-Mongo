@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Juego</title>
+</head>
+
+<body>
+
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link active-link">Inicio</a>
+                    </li>
+    
+                    <li>
+                        <a href="nivel1.html" class="nav__link">Nivel 1</a>
+                    </li>
+    
+                    <li>
+                        <a href="nivel2.html" class="nav__link">Nivel 2</a>
+                    </li>
+    
+                    <li>
+                        <a href="nivel3.html" class="nav__link">Nivel 3</a>
+                    </li>
+
+                    
+                    <li>
+                        <a href="nivel4.html" class="nav__link">Nivel 4</a>
+                    </li>
+    
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-fill"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-fill"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-juego">
+
+        <h1>Nivel 3</h1>
+        <section class="texto">
+
+            <p>Consultas basicas<br>
+                consulta la coleccion linea<br>
+                db.<span id="0" class="span6"></span> <span id="1" class="span6"></span><br>
+                consulta por nombre<br>
+                db.<span id="2" class="span6"></span>.find({<span id="3" class="span6"></span>:"Mid"})<br>
+                consulta de manera ordenada<br>
+                db.linea.find()<span id="4" class="span6"></span><span id="5" class="span2"></span>
+                <br>
+
+
+            </p>
+
+        </section>
+
+        <section class="opciones" id="opciones">
+
+
+        </section>
+
+        <h2 id="resultado"></h2>
+
+        <button id="comprobar">Comprobar</button>
+        <a href="nivel2.html">Nivel anterior</a>
+        <a href="nivel4.html">Siguiente nivel</a>
+        
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script3.js"></script>
+    <script src="nav.js"></script>
+</body>
+
+</html>

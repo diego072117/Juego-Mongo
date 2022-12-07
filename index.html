@@ -1,241 +1,59 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="js/Winwheel.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/jQuery-2.1.4.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="../../img/juego.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styleIndex.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+ 
+    <title>Juego</title>
 </head>
 
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h1>MongoDB</h1> <br>
-        </div>
-        <div class="col-md-6">
-            <canvas id="canvas" height="600px" width="600px">
-            </canvas>
-        </div>
-    </div>
-</div>
-<input type="button" value="Girar" onclick="miRuleta.startAnimation();" class="girar">
 
+    
 
-
-<script>
-    var miRuleta = new Winwheel({
-
-        'numSegments' : 5,
-        'outerRadius' : 270,
-        'segments':[
-            {'fillStyle': '#28B463', 'text': 'Pregunta 1'},
-            {'fillStyle': '#D4EFDF ', 'text': 'Pregunta 2'},
-            {'fillStyle': '#ABEBC6', 'text': 'Pregunta 3'},
-            {'fillStyle': '#28B463', 'text': 'Pregunta 4'},
-            {'fillStyle': '#A8DDB8', 'text': 'Pregunta 5'},
-
-        ],
-        'animation':{
-            'type':'spinToStop',
-            'duration': 6,
-            'callbackFinished':'Mensaje()',
-            'callbackAfter':'dibujarIndicador()'
-        }
-    });
-
-    dibujarIndicador();
-    function Mensaje() {
-        var SegmentoSeleccionado = miRuleta.getIndicatedSegment();
-       
-        if(SegmentoSeleccionado.text == "Pregunta 1"){
-            $('#myModal1').modal({backdrop:'static'});
-        }
-        if(SegmentoSeleccionado.text == "Pregunta 2"){
-            $('#myModal2').modal({backdrop:'static'});
-        }
-        if(SegmentoSeleccionado.text == "Pregunta 3"){
-            $('#myModal3').modal({backdrop:'static'});
-        }
-        if(SegmentoSeleccionado.text == "Pregunta 4"){
-            $('#myModal4').modal({backdrop:'static'});
-        }
-        if(SegmentoSeleccionado.text == "Pregunta 5"){
-            $('#myModal5').modal({backdrop:'static'});
-        }
-
-        miRuleta.stopAnimation(false);
-        miRuleta.rotationAngle = 0;
-        miRuleta.draw();
-        dibujarIndicador();
-    }
-    function dibujarIndicador() {
-        var ctx = miRuleta.ctx;
-        ctx.strokeStyle = 'navy';
-        ctx.fillStyle = 'black';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(300,0);
-        ctx.lineTo(320,0);
-        ctx.lineTo(300,40);
-        ctx.lineTo(280,0);
-        ctx.stroke();
-        ctx.fill();
-    }
-
-
-
-</script>
-
-
-<!-- -->
-<!-- aqui introduccir la pregunta 1-->
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="width: 90%;margin: auto">
-    <div class="modal-dialog" role="document" style="width: 90%;margin: auto">
-        <div class="modal-content" style="width: 90%;margin: auto">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title" id="myModalLabel" style="color:#000">¿Cómo se crea una base de datos?</h2>
+    <div class="container-cards">
+        <div class="card">
+            <div class="imgBx">
+                <img src="https://img.freepik.com/vector-premium/cerebro-libro-inteligente-dibujos-animados-sano-lindo-cerebro-humano-inteligencia-aprendizaje-vector-stock_502320-563.jpg" alt="">
             </div>
-            <div class="modal-body">
-                <br>
-                <h2>Que alimentos consumian nuestros ancestros</h2>
-            </div>
-           
-            <hr>
-            <div class="row">
-
-            </div>
-            <br>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Large modal -->
-<!-- aqui introduccir la pregunta 2-->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="width: 90%;margin: auto">
-    <div class="modal-dialog" role="document" style="width: 90%;margin: auto">
-        <div class="modal-content" style="width: 90%;margin: auto">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title" id="myModalLabel" style="color:#000">PREGUNTA 2</h2>
-            </div>
-            <div class="modal-body">
-                <br>
-                <h2>Que alimentos consumian nuestros ancestros</h2>
-            </div>
-           
-            <hr>
-            <div class="row">
-
-            </div>
-            <br>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Large modal -->
-
-<!-- aqui introduccir la pregunta 3-->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="width: 90%;margin: auto">
-    <div class="modal-dialog" role="document" style="width: 90%;margin: auto">
-        <div class="modal-content" style="width: 90%;margin: auto">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                
-                    <h2 class="modal-title" id="myModalLabel" style="color:#000">PREGUNTA 3</h2>
-            </div>
-            <div class="modal-body">
-                <br>
-                <h2>Las comidas  chatarras son consideradas alimentos naturales ¿porque?</h2>
-            </div>
-            <hr>
-            <div class="row">
-
-            </div>
-            <br>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Large modal -->
-
-<!-- aqui introduccir la pregunta 4-->
-<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="width: 90%;margin: auto">
-    <div class="modal-dialog" role="document" style="width: 90%;margin: auto">
-        <div class="modal-content" style="width: 90%;margin: auto">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                
-                    <h2 class="modal-title" id="myModalLabel" style="color:#000">PREGUNTA 4.</h2>
-            </div>
-            <div class="modal-body">
-                <br>
-                <h2>Mencione los alimentos naturales de su región</h2>
-            </div>
-            <hr>
-            <div class="row">
-
-            </div>
-            <br>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Large modal -->
-
-<!-- aqui introduccir la pregunta 5-->
-<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="width: 90%;margin: auto">
-    <div class="modal-dialog" role="document" style="width: 90%;margin: auto">
-        <div class="modal-content" style="width: 90%;margin: auto">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                
-                    <h2 class="modal-title" id="myModalLabel" style="color:#000">PREGUNTA 5.</h2>
-            </div>
-            <div class="modal-body">
-                <br>
-                <h2>Menciona una receta que contenga quinua</h2>
-            </div>
-            
-            <hr>
-            <div class="row">
-                <div class="col-md-12">
-
+            <div class="content">
+                <div class="details">
+                    <h2>Estudia para tu prueba<br><span>Acerca de mongo </span></h2>
+                   
+                    <div class="actionBtn">
+                        <a href="aprende.html">Ingresar</a>
+                  
+                    </div>
                 </div>
             </div>
-            <br>
+        </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
+        <div class="card">
+            <div class="imgBx">
+                <img src="https://i.pinimg.com/474x/21/52/ff/2152ff6359300c0ad313db9243322c59.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="details">
+                    <h2>Ponte a prueba<br><span>Pon en practica lo aprendido</span></h2>
+                   
+                    <div class="actionBtn">
+                        <a href="nivel1.html">Ingresar</a>
+                
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
-</div>
-<!-- Large modal -->
 
 
-
-<!-- *********************** SCRIPTS *********************************-->
-<script src="js/bootstrap.js"></script>
-<!-- *********************** SCRIPTS *********************************-->
+    <script src="/nav.js"></script>
 </body>
+
 </html>

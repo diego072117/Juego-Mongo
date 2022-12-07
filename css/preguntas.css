@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-pregu {
+    width: 90%;
+    margin: 100px auto;
+}
+
+.container-faq {
+    box-shadow: 0 0 15px -1px rgba(0,0,0,.1);
+    padding: 30px;
+}
+
+.container-faq .title-faq {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.container-faq .item-faq {
+    box-shadow: 0 0 15px -1px rgba(0,0,0,.2);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.container-faq .item-faq .question {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(43, 51, 122, .2);
+    padding: 20px 20px 20px 80px;
+    transition: .4s;
+}
+
+.container-faq .item-faq .question .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px -1px rgba(0,0,0,.2);
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container-faq .item-faq .question .more:hover {
+    box-shadow: 0 0 15px -1px rgba(0,0,0,.4);
+}
+
+.container-faq .item-faq .question span {
+    position: absolute;
+    left: 10px;
+    font-size: 3rem;
+    top: 10px;
+    opacity: .1;
+}
+
+.container-faq .item-faq .answer {
+    position: relative;
+    padding: 0 20px 0 80px;
+    overflow: hidden;
+    height: 0;
+    transition: .4s;
+}
+
+.container-faq .item-faq .answer p {
+    font-size: 1.3rem;
+}
+
+.container-faq .item-faq .answer span {
+    position: absolute;
+    left: 10px;
+    font-size: 3rem;
+    top: -10px;
+    opacity: .2;
+}
+
+
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+
+/*=============== Reusable Css ===============*/
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+  
+  /*=============== Header ===============*/
+  
+  .header{
+    /* display: flex; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: 0.3s;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 14%);
+  }
+  
+  .nav{
+    height: calc(var( --header-height) + 0.875rem);
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .nav__list{
+    display: flex;
+    margin: 20px;
+    column-gap: 3.25rem;
+  }
+  
+  .nav__link{
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: var(--bold);
+    font-family: var(--mono-font);
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .nav__link:hover{
+    opacity: 0.5;
+  }
+  
+  .nav__link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -0.5rem;
+    width: 7px;
+    height: 2px;
+    background-color: #000;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  .nav__link:hover::after{
+    opacity: 1;
+  }
+  
+  .nav__close,
+  .nav__toggle{
+    display: none;
+  }
+  
+  /* Active Link */
+  
+  .active-link{
+    opacity: 0.5;
+    color: #000;
+    font-size: 1em;
+    font-weight: 1000;
+  }
+  
+  .active-link::after{
+    opacity: 1;
+  }
+  
+
+  
+@media screen and (max-width: 992px) {
+
+ 
+
+    .nav__menu{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-100%);
+      transition: 0.3s;
+    }
+  
+    .show-menu{
+      transform: translateX(0);
+    }
+  
+    .nav__list{
+      flex-direction: column;
+      row-gap: 2.125rem;
+      text-align: center;
+    }
+  
+    .nav__toggle,
+    .nav__close{
+      display: block;
+    }
+  
+    .nav__close{
+      font-size: 1.5rem;
+      position: absolute;
+      top: 2.7rem;
+      left: 8%;
+      cursor: pointer;
+      color: #000;
+    }
+  
+    .nav__toggle{
+      color: #000;
+      margin: 20px;
+      font-size: 1.25rem;
+      opacity: 0.5;
+    }
+
+    .nav__link{
+        font-size: 1em;
+        color: #fff;
+     
+      }
+    
+      .active-link{
+        font-size: 1em;
+        color: #fff;
+        
+      }
+  
+
+  }
+  
+  /* for medium devices */
+  @media screen and (max-width: 791px) {
+  
+
+  
+  }
+  
+  @media screen and (max-width: 576px) {
+  
+
+  
+  }
+  
+  /* for small devices */
+  @media screen and (max-width: 350px) {
+  
+   
+  
+  
+    }
+  
+  

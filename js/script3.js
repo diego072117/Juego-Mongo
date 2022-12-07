@@ -1,11 +1,11 @@
 // Arreglo que contiene el orden correcto de las palabras 
 
 let orden_correcto = [
-    '.updateOne',
-    '$set:',
-    '.deleteOne',
-    '({"nombre":"Top"})',
-    '.dropDatabase',
+    'linea.',
+    'find()',
+    'linea',
+    'nombre',
+    '.pretty',
     '()',
    
 ]
@@ -13,12 +13,12 @@ let orden_correcto = [
 //palabras desordenadas para mostrar en opciones 
 
 let palabras_juego = [
-    '({"nombre":"Top"})',
-    '.dropDatabase',
-    '.updateOne',
-    '$set:',
+    'nombre',
+    '.pretty',
+    'linea.',
+    'find()',
     '()',
-    '.deleteOne'
+    'linea'
 ]
 
 //container de las opciones 
@@ -104,7 +104,7 @@ comprobar.onclick = function () {
         }
 
     } else {
-        Swal.fire("Completa todos los campos")
+        alert("Completa todos los campos")
     }
 }
 

@@ -42,7 +42,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(fondoMongo.png);
+  background-image: url(../img/fondoMongo.png);
   background-size: cover;
   /* background: linear-gradient(45deg, #fbda61, #ff5acd); */
 }
@@ -55,85 +55,6 @@ a {
   text-decoration: none;
 }
 
-
-/*=============== Reusable Css ===============*/
-
-.container{
-  max-width: 1140px;
-  margin: 0 auto;
-  padding-left: 0.9rem;
-  padding-right: 0.9rem;
-}
-
-/*=============== Header ===============*/
-
-.header{
-  /* display: flex; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  transition: 0.3s;
-  box-shadow: 0 5px 8px 0 rgb(0 0 0 / 14%);
-}
-
-.nav{
-  height: calc(var( --header-height) + 0.875rem);
-  display: flex;
-  align-items: flex-end;
-}
-
-.nav__list{
-  display: flex;
-  margin: 20px;
-  column-gap: 3.25rem;
-}
-
-.nav__link{
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: var(--bold);
-  font-family: var(--mono-font);
-  text-transform: uppercase;
-  position: relative;
-  transition: 0.3s;
-}
-
-.nav__link:hover{
-  opacity: 0.5;
-}
-
-.nav__link::after{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: -0.5rem;
-  width: 7px;
-  height: 2px;
-  background-color: #fff;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.nav__link:hover::after{
-  opacity: 1;
-}
-
-.nav__close,
-.nav__toggle{
-  display: none;
-}
-
-/* Active Link */
-
-.active-link{
-  opacity: 0.5;
-}
-
-.active-link::after{
-  opacity: 1;
-}
 
 
 
@@ -153,13 +74,13 @@ a {
 
 .card {
   position: relative;
-  margin: 1.25em;
-  width: 21.875em;
-  height: 400px;
-  background: #f1f1f1;
-  border-radius: 1.25em;
-  box-shadow: 0 2.188em 5em rgba(0, 0, 0, 20);
-  transition: 0.5s;
+    margin: 1.25em;
+    width: 21.875em;
+    height: 400px;
+    background: #f1f1f1;
+    border-radius: 1.25em;
+    box-shadow: 0 2.188em 5em rgb(0 0 0);
+    transition: 0.5s;
 }
 
 /* .card:hover {
@@ -254,6 +175,13 @@ a {
   cursor: pointer;
   margin: 0 30%;
 }
+
+
+
+
+
+
+
 
 
 /*=============== BreakPoints ===============*/

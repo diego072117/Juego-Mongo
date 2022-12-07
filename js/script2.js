@@ -1,25 +1,24 @@
 // Arreglo que contiene el orden correcto de las palabras 
 
 let orden_correcto = [
-    'use',
-    'createCollection',
-    'db.',
-    '.insert',
-    '"nombreLinea":',
-    '"descripccion":',
+    '[',
+    '}',
+    ',',
+    ']',
+    'show',
+    'collections',
    
 ]
 
 //palabras desordenadas para mostrar en opciones 
 
 let palabras_juego = [
-    '.insert',
-    '"nombreLinea":',
-    'use',
-
-    'createCollection',
-    '"descripccion":',
-    'db.'
+    ']',
+    'show',
+    '[',
+    '}',
+    'collections',
+    ','
 ]
 
 //container de las opciones 
@@ -105,7 +104,7 @@ comprobar.onclick = function () {
         }
 
     } else {
-        Swal.fire("completa las palabras")
+        alert("Completa todos los campos")
     }
 }
 

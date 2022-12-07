@@ -16,7 +16,7 @@ let palabras_juego = [
     '.insert',
     '"nombreLinea":',
     'use',
-    
+
     'createCollection',
     '"descripccion":',
     'db.'

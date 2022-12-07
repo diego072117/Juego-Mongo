@@ -2,6 +2,95 @@ body{
     font-family: 'Verdana';
 }
 
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  /*=============== Reusable Css ===============*/
+  
+  .container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+/*=============== Header ===============*/
+
+.header{
+    /* display: flex; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: 0.3s;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 14%);
+  }
+  
+  .nav{
+    height: calc(var( --header-height) + 0.875rem);
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .nav__list{
+    display: flex;
+    margin: 20px;
+    column-gap: 3.25rem;
+  }
+  
+  .nav__link{
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: var(--bold);
+    font-family: var(--mono-font);
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .nav__link:hover{
+    opacity: 0.5;
+  }
+  
+  .nav__link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -0.5rem;
+    width: 7px;
+    height: 2px;
+    background-color: #000;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  .nav__link:hover::after{
+    opacity: 1;
+  }
+  
+  .nav__close,
+  .nav__toggle{
+    display: none;
+  }
+  
+  /* Active Link */
+  
+  .active-link{
+    opacity: 0.5;
+  }
+  
+  .active-link::after{
+    opacity: 1;
+  }
+
+
 h1{
     text-align: center;
 }
@@ -55,6 +144,10 @@ span{
 
 .span8{
     width: 11em;
+}
+
+.container-juego{
+  margin-top: 5em;
 }
 
 .texto{
